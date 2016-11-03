@@ -1,0 +1,128 @@
+/*=== General ===*/
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../images/bg.jpg)
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/*=== Common ===*/
+.wrapper {
+    width: 600px;
+    min-height: 100%;
+    margin: 0 auto;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -ms-perspective: 800px;
+    perspective: 800px;
+}
+
+/*=== Container ===*/
+.container {
+    width: 450px;
+    height: 450px;
+    margin: 17% auto;
+    -webkit-transform: rotate3d(2, -2, 4, 67deg);
+    -moz-transform: rotate3d(2, -2, 4, 67deg);
+    -o-transform: rotate3d(2, -2, 4, 67deg);
+    -ms-transform: rotate3d(2, -2, 4, 67deg);
+    transform: rotate3d(2, -2, 4, 67deg);
+}
+.border-left, .border-right {
+    width: 25px;
+}
+.border-left div, .border-right div {
+    height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    line-height: 50px;
+}
+.border-top {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.border-top div, .border-bottom div {
+    float: left;
+    vertical-align: middle;
+    width: 50px;
+    height: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    line-height: 25px;
+}
+.border-right {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+div .angular {
+    height: 25px;
+}
+.border-top, .border-left, .border-right, .border-bottom {
+    float: left;
+    background: #8C4C33;
+    color: #ffffff;
+}
+.border-right {
+    float: right;
+}
+.сheckers {
+    float: left;
+    font-size: 0;
+    width: 400px;
+    height: 400px;
+}
+.cell {
+    float: left;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    background: #F0B068;
+}
+.cell:nth-child(-n+8):nth-child(even),
+.cell:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.cell:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.cell:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.cell:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.cell:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.cell:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.cell:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+	background-color: #62261B;
+}
+.cell:after {
+	width: 39px;
+    height: 39px;
+	content: '';
+	display: block;
+    margin-left: 5px;
+    margin-top: 5px;
+	background-color: transparent;
+	-webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -o-border-radius: 50px;
+    -ms-border-radius: 50px;
+	border-radius: 50px;
+}
+.cell:nth-child(-n+8):nth-child(even):after,
+.cell:nth-child(n+9):nth-child(-n+16):nth-child(odd):after,
+.cell:nth-child(n+17):nth-child(-n+24):nth-child(even):after {
+	background-color: black;
+    border: 1px solid #4c4a4a;
+}
+.cell:nth-child(n+41):nth-child(-n+48):nth-child(odd):after,
+.cell:nth-child(n+49):nth-child(-n+56):nth-child(even):after,
+.cell:nth-child(n+57):nth-child(-n+64):nth-child(odd):after {
+    background-color: white;
+    border: 1px solid #ccc;
+}
